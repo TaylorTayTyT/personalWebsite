@@ -17,7 +17,14 @@ function TopBar() {
             </div>
             <img className="fingerprint" src={fingerprint} alt="fingerprint"></img>
             <div className="topBarButton">
-                <Button sx={{ backgroundColor: '#FFF' }}>hello</Button>
+                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>hello</Button>
+                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>hello</Button>
+                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>hello</Button>
+            </div>
+            <div className="makeYourMark">
+                <h1>
+                    Make your mark
+                </h1>
             </div>
 
         </Container>
