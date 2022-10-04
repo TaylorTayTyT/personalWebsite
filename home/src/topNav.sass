@@ -1,13 +1,23 @@
 $primary-color: #F3ADAD
-
+$button-color: white
+.topContainer
+    height: 400px
 .topNav
     display: block
-    width: 120%
+    width: 1500px
     scale: 2
-    overflow: hidden
     background: $primary-color
     height: 200px
     transform: rotate(-5deg)
+    z-index: 0
 .fingerprint
+    position: absolute
     scale: 0.10
-    transform: translate(-425%, -590%)
+    transform: translate(-575%, -590%)
+.topBarButton
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 1000
+    color: #FFF
+    
