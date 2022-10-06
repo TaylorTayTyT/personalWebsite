@@ -1,5 +1,6 @@
 import "./topNav.sass";
 import fingerprint from "./images/fingerprint.png";
+import meNoBG from "./images/meNoBG.png";
 import { Button, Container, Grid, ListItem, Paper, styled } from "@mui/material";
 
 
@@ -26,6 +27,8 @@ function TopBar() {
                     Leave your <br></br>mark
                 </h1>
             </div>
+
+            <img src = {meNoBG} alt = "me"></img>
 
         </Container>
     )
