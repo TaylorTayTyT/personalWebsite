@@ -23,7 +23,7 @@ function TopBar() {
             </div>
             <div className="makeYourMark">
                 <h1>
-                    Make your mark
+                    Leave your <br></br>mark
                 </h1>
             </div>
 
