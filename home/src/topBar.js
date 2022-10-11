@@ -1,7 +1,7 @@
 import "./topNav.sass";
 import fingerprint from "./images/fingerprint.png";
 import meNoBG from "./images/meNoBG.png";
-import { Button, Container, Grid, ListItem, Paper, styled } from "@mui/material";
+import { Button, Container, Paper, styled, Menu, MenuItem } from "@mui/material";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -18,9 +18,20 @@ function TopBar() {
             </div>
             <img className="fingerprint" src={fingerprint} alt="fingerprint"></img>
             <div className="topBarButton">
-                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>about</Button>
-                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>valorant</Button>
-                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>info</Button>
+                <Menu className = "resumeOptions" open= {true}>
+                    <MenuItem>
+                        HTML
+                    </MenuItem>
+                    <MenuItem>
+                        CSS
+                    </MenuItem>
+                    <MenuItem>
+                        Javascript
+                    </MenuItem>
+                </Menu>
+                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>About</Button>
+                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>Resume</Button>
+                <Button sx={{ backgroundColor: '#FFF', margin: "10px" }}>Info</Button>
             </div>
             <div className="makeYourMark">
                 <h1>
