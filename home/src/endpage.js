@@ -4,7 +4,8 @@ import { Box } from "@mui/material"
 function Endpage() {
     return (
         <Box className = "endpage" height = "200px">
-            sup
+            <h1>Contact</h1>
+            <h2>Phone: (714)552-9300<br></br>Email: taylornguyen904@gmail.com</h2>
         </Box>
     )
 }

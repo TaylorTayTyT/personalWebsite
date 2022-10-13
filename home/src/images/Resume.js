@@ -4,13 +4,10 @@ import "./Resume.sass";
 function Resume() {
     return(
         <div>
-            
-        <Container maxWidth="false">
-            <Box height = "1000px">
+            <Box width = "100%" height = "600px" sx = {{background: "#000", paddingBottom: "10px"}}>
             <h1 className="Resume">afishofsafafhuiahfpihaihfiahfpihaifhpahfo[ihaoifho[ahjfoiahofhasoihf[osahfo[isha[ofhsao[hasfhasfhoiahfaskfaskfklsajflkajsf</h1>
             ifasfljsfa
             </Box>
-        </Container>
         </div>
     )
 }
