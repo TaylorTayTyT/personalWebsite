@@ -15,3 +15,7 @@ code {
 body {
   overflow-x: hidden;
 }
+
+.Endpage {
+  bottom: 0;
+}

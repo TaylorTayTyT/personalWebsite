@@ -1,7 +1,9 @@
 import "./topNav.sass";
 import fingerprint from "./images/fingerprint.png";
 import meNoBG from "./images/meNoBG.png";
+import handleNavBar from "./functionality/handleNavBar";
 import { Button, Container, Paper, styled, Menu, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
+import { useState } from "react";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -11,7 +13,12 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
+
 function TopBar() {
+    const [open, setOpen] = useState(false);
+    const handleMenuClick = () => {
+        setOpen(!open)
+    };
     return (
         <Container className="topContainer">
             <div className="topNav">
@@ -20,7 +27,7 @@ function TopBar() {
             <div className="topBarButton">
                 <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">page</InputLabel>
-                <Select className = "resumeOptions" labelId ="demo-simple-select-label" label = "page" open = {false}>
+                <Select className = "resumeOptions" labelId ="demo-simple-select-label" label = "page" open = {open} onClick = {handleMenuClick}>
                     <MenuItem value = {10}>
                         Home
                     </MenuItem>

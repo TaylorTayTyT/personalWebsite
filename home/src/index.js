@@ -4,12 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import TopBar from './topBar';
 import Photo from './Photo.js';
+import Endpage from './endpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <TopBar />
     <Photo/>
+    <Endpage className = "Endpage"></Endpage>
   </React.StrictMode>
 );
 
