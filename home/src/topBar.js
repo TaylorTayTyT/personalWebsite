@@ -26,15 +26,22 @@ function TopBar() {
             <img className="fingerprint" src={fingerprint} alt="fingerprint"></img>
             <div className="topBarButton">
                 <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">page</InputLabel>
-                    <Select className="resumeOptions" labelId="demo-simple-select-label" label="page" open={open} onClick={handleMenuClick} defaultValue = "">
-                        <MenuItem value={10}>
+                    <InputLabel id="navBar">page</InputLabel>
+                    <Select className="resumeOptions"
+                        id="navBarSelect"
+                        label="page"
+                        open={open}
+                        onClick={handleMenuClick}
+                        defaultValue="Home"
+                        sx={{ right: "5%" }}
+                    >
+                        <MenuItem value={1}>
                             Home
                         </MenuItem>
-                        <MenuItem value={20}>
+                        <MenuItem value={2}>
                             About
                         </MenuItem>
-                        <MenuItem value={30}>
+                        <MenuItem value={3}>
                             Resume
                         </MenuItem>
                     </Select>

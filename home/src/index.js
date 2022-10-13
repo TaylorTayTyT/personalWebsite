@@ -5,13 +5,15 @@ import reportWebVitals from './reportWebVitals';
 import TopBar from './topBar';
 import Photo from './Photo.js';
 import Endpage from './endpage';
+import Resume from './images/Resume';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <TopBar />
     <Photo/>
-    <Endpage className = "Endpage"></Endpage>
+    <Resume></Resume>
+    <Endpage></Endpage>
   </React.StrictMode>
 );
 
