@@ -23,6 +23,9 @@ function TopBar() {
         <Container className="topContainer">
             <div className="topNav">
             </div>
+            <div className="leftBrick">
+                
+            </div>
             <img className="fingerprint" src={fingerprint} alt="fingerprint"></img>
             <div className="topBarButton">
                 <FormControl fullWidth>
