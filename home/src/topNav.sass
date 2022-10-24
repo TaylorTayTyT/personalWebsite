@@ -1,27 +1,51 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
     
-$primary-color: #F3ADAD
+$topBarColor: #010714
+$leftBrickColor: #260101
+$rightBrickColor: #ECD5D5
 $button-color: white
 .topContainer
     height: 400px
 .topNav
+    position: relative
     display: block
     width: 1500px
     scale: 2
-    background: $primary-color
+    background: $topBarColor
     height: 200px
     transform: rotate(-5deg)
-    z-index: 0
+    z-index: 1
 .leftBrick
+    position: relative
     display: block
     width: 50%
     height: 300px
-    background: #511A1A
+    background: $leftBrickColor
+    transform: translate(-38%, 0%)
+    height: 650px
+    z-index: 0
+.rightBrick
+    position: relative
+    z-index: -1
+    background: $rightBrickColor
+    width: 1500px
+    height: 600px
+    transform: translate(0%, -100%)
+.circle
+    position: relative
+    z-index: 0
+    width: 300px
+    height: 300px
+    border-radius: 50%
+    background: #FFF
+    transform: translate(145%, -200%)
+    scale: 1.73
 .fingerprint
-    position: absolute
+    position: relative
     left: 10%
     scale: 0.10
-    transform: translate(-575%, -590%)
+    transform: translate(-550%, -720%)
+    z-index: 2
 .topBarButton
     position: absolute
     top: 2.5%
@@ -33,7 +57,19 @@ $button-color: white
     
 .makeYourMark
     position: absolute
+    color: #FFF
     size: 100px
     left: 10%
-    top: 10px
+    top: 20px
     font-family: 'Nunito', sans-serif
+    z-index: 2
+.intro 
+    position: absolute
+    color: #FFF
+    z-index: 5
+    top:57%
+    left: 5%
+    font-family: 'Nunito', sans-serif
+    width: 900px
+    font-size: 100px
+    

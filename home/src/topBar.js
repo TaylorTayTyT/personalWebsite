@@ -23,10 +23,9 @@ function TopBar() {
         <Container className="topContainer">
             <div className="topNav">
             </div>
-            <div className="leftBrick">
-                
-            </div>
-            <img className="fingerprint" src={fingerprint} alt="fingerprint"></img>
+            <div className="leftBrick"></div>
+            <div className="rightBrick"></div>
+            <div className="circle"></div>
             <div className="topBarButton">
                 <FormControl fullWidth>
                     <InputLabel id="navBar">page</InputLabel>
@@ -36,7 +35,7 @@ function TopBar() {
                         open={open}
                         onClick={handleMenuClick}
                         defaultValue="Home"
-                        sx={{ right: "5%" }}
+                        sx={{ right: "5%", color: "#FFF", borderColor: "#FFF", background: "#9AB0E0" }}
                     >
                         <MenuItem value={1}>
                             Home
@@ -56,6 +55,7 @@ function TopBar() {
                     Leave your <br></br>mark
                 </h1>
             </div>
+            <div className="intro">Hi, <br></br>I'm Taylor</div>
         </Container>
     )
 }
