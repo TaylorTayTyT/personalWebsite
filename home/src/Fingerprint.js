@@ -1,3 +1,4 @@
+import { height } from "@mui/system";
 import fingerprint from "./images/fingerprint.png";
 import "./topNav.sass"
 function Fingerprint() {
