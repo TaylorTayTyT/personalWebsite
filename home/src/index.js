@@ -5,8 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import TopBar from './topBar';
 import Photo from './Photo.js';
 import Endpage from './endpage';
-import Resume from './images/Resume';
 import Fingerprint from './Fingerprint';
+import Flex from './Flex';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +14,7 @@ root.render(
     <TopBar />
     <Fingerprint/>
     <Photo/>
-    <Resume></Resume>
+    <Flex/>
   </React.StrictMode>
 );
 
