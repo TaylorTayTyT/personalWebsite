@@ -11,6 +11,8 @@ function Fingerprint() {
             <img class="backgroundFingerprint d" src={fingerprint} alt="fingerprint"></img>
             <img class="backgroundFingerprint e" src={fingerprint} alt="fingerprint"></img>
             <img class="backgroundFingerprint f" src={fingerprint} alt="fingerprint"></img>
+            <img class="backgroundFingerprint g" src={fingerprint} alt="fingerprint"></img>
+            <img class="backgroundFingerprint h" src={fingerprint} alt="fingerprint"></img>
         </div>
     )
 }
