@@ -1,8 +1,5 @@
 import "./topNav.sass";
-import fingerprint from "./images/fingerprint.png";
-import meNoBG from "./images/meNoBG.png";
-import handleNavBar from "./functionality/handleNavBar";
-import { Button, Container, Paper, styled, Menu, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
+import {Container, Paper, styled, Menu, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import { useState } from "react";
 
 
