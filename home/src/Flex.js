@@ -1,8 +1,6 @@
 import "./Flex.sass";
 import "animate.css"
-import React, { useEffect, useState } from "react";
 function Flex() {
-    const langauges = ["Python", "Java", "C#", "C++", "C"];
     const element = document.getElementById("languages");
 
     const animateCSS = (animation, prefix = 'animate__') =>

@@ -28,14 +28,12 @@ function FlexButton() {
     }
     else {
         return (
-            <div class="res">
-                <h1 class="flex introRes">Comfortable with: </h1>
-                <br /><br />
-                <div class="flex language">
-                    <h1>{language}<button onClick={handleSwipe} class="material-symbols-outlined" style={{ scale: "2", verticalAlign: "middle", paddingLeft: "10px" }}>
-                        chevron_right
-                    </button></h1>
-                </div>
+            <div class="flex language ">
+                <p>Comfortable with: </p>
+                <p class="animate__animated animate__fadeInDown" style = {{padding: "0", display: "inline"}}>{language}</p>
+                <br/><button onClick={handleSwipe} class="material-symbols-outlined" style={{ scale: "1", verticalAlign: "middle", padding: "0px", display: "inline-block"}}>
+                    chevron_right
+                </button>
             </div>
         )
     }
