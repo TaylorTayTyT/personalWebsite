@@ -4,17 +4,27 @@ import "./Flex.sass";
 import React, { useEffect, useState } from "react";
 
 function FlexButton() {
+    let index = 0;
+
+    useEffect(() => {
+        console.log("triggered");
+        let element = document.getElementById("language");
+        if (element != null) {
+            element.classList.remove("animate__animated", "animate__fadeInDown");
+        }
+    }, [index]);
+
     const languages = ["Python", "Java", "C#", "C++", "C"];
-    const [index, setIndex] = useState(0);
     let language = languages[index];
     const handleClick = () => {
-        Flex();
+        //Flex();
         setClicked(true);
     };
     let handleSwipe = (() => {
-        console.log("clicked");
         let newInd = (index + 1) % 5;
-        setIndex(newInd);
+        index = newInd;
+        console.log(index);
+        //setIndex(newInd);
     });
 
     const [clicked, setClicked] = useState(false);
@@ -30,8 +40,8 @@ function FlexButton() {
         return (
             <div class="flex language ">
                 <p>Comfortable with: </p>
-                <p class="animate__animated animate__fadeInDown" style = {{padding: "0", display: "inline"}}>{language}</p>
-                <br/><button onClick={handleSwipe} class="material-symbols-outlined" style={{ scale: "1", verticalAlign: "middle", padding: "0px", display: "inline-block"}}>
+                <p id="language" class="animate__animated animate__fadeInDown" style={{ padding: "0", display: "inline" }}>{language}</p>
+                <br /><button onClick={handleSwipe} class="material-symbols-outlined" style={{ scale: "1", verticalAlign: "middle", padding: "0px", display: "inline-block" }}>
                     chevron_right
                 </button>
             </div>
