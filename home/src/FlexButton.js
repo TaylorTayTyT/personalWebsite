@@ -1,30 +1,18 @@
-import { Button } from "@mui/material"
-import Flex from "./Flex";
 import "./Flex.sass";
 import React, { useEffect, useState } from "react";
 
 function FlexButton() {
-    let index = 0;
-
-    useEffect(() => {
-        console.log("triggered");
-        let element = document.getElementById("language");
-        if (element != null) {
-            element.classList.remove("animate__animated", "animate__fadeInDown");
-        }
-    }, [index]);
+    const [index, setIndex] = useState(0); 
 
     const languages = ["Python", "Java", "C#", "C++", "C"];
     let language = languages[index];
     const handleClick = () => {
-        //Flex();
         setClicked(true);
     };
+
     let handleSwipe = (() => {
         let newInd = (index + 1) % 5;
-        index = newInd;
-        console.log(index);
-        //setIndex(newInd);
+        setIndex(newInd);
     });
 
     const [clicked, setClicked] = useState(false);

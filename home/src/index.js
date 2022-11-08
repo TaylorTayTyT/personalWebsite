@@ -14,7 +14,6 @@ root.render(
   <React.StrictMode>
     <TopBar />
     <Fingerprint/>
-    <Photo/>
     <FlexButtons/>
   </React.StrictMode>
 );
