@@ -17,7 +17,6 @@ function handleRandClick(e) {
 
 
 function TopBar() {
-    document.addEventListener('click', handleRandClick(e));
 
     const [open, setOpen] = useState(false);
     const handleMenuClick = () => {
