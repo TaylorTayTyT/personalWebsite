@@ -6,15 +6,16 @@ import TopBar from './topBar';
 import Photo from './Photo.js';
 import Endpage from './endpage';
 import Fingerprint from './Fingerprint';
-import Flex from './Flex';
+import About from './About';
 import FlexButtons from './FlexButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TopBar />
+    <TopBar/>
     <Fingerprint/>
     <FlexButtons/>
+    <About/>
   </React.StrictMode>
 );
 
