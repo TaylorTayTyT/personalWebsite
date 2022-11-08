@@ -1,6 +1,7 @@
 import "./topNav.sass";
 import {Container, Paper, styled, Menu, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import { useState } from "react";
+import mePic from "./images/meNoBG.png";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -10,8 +11,14 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
+function handleRandClick(e) {
+    console.log(e)
+}
+
 
 function TopBar() {
+    document.addEventListener('click', handleRandClick(e));
+
     const [open, setOpen] = useState(false);
     const handleMenuClick = () => {
         setOpen(!open)
@@ -22,7 +29,9 @@ function TopBar() {
             </div>
             <div className="leftBrick"></div>
             <div className="rightBrick"></div>
-            <div className="circle"></div>
+            <div className="circle">
+                <img className = "picOfMe" src = {mePic} alt = "mePic"/>
+            </div>
             <div className="topBarButton">
                 <FormControl fullWidth>
                     <InputLabel id="navBar">page</InputLabel>
