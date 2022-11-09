@@ -2,26 +2,42 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import "./About.sass";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { palette } from '@mui/system';
+import { ClassNames } from '@emotion/react';
 function About() {
 
-    return (
-        <Box style = {{transform:"translateY(800%)"}}
-            sx={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                '& > :not(style)': {
-                    m: 1,
-                    width: 200,
-                    height: 128,
-                },
+    const theme = createTheme({
+        paperRoot: {
+            backgroundColor: "#0052cc",
+        },
+        palette: {
+            primary: {
+                main: '#0052cc',
+            },
+            secondary: {
+                main: '#edf2ff',
+            },
+        },
+    });
 
-            }}
-        >
-            <Paper elevation={0} />
-            <Paper />
-            <Paper elevation={3} />
-            <h1>hello</h1>
-        </Box>
+    return (
+        <ThemeProvider theme = {theme}>
+            <Box style={{ transform: "translateY(250%)" }}
+                sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    '& > :not(style)': {
+                        m: 1,
+                        width: 1000,
+                        height: 400,
+                    },
+                    justifyContent: 'center',
+                }}
+            >
+                <Paper sx = {{backgroundColor: "primary.main"}}/>
+            </Box>
+        </ThemeProvider>
     )
 }
 export default About;
