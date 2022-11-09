@@ -13,7 +13,7 @@ function About() {
         },
         palette: {
             primary: {
-                main: '#0052cc',
+                main: '#F29797',
             },
             secondary: {
                 main: '#edf2ff',
@@ -23,7 +23,7 @@ function About() {
 
     return (
         <ThemeProvider theme = {theme}>
-            <Box style={{ transform: "translateY(250%)" }}
+            <Box style={{ transform: "translateY(270%)" }}
                 sx={{
                     display: 'flex',
                     flexWrap: 'wrap',
@@ -35,7 +35,12 @@ function About() {
                     justifyContent: 'center',
                 }}
             >
-                <Paper sx = {{backgroundColor: "primary.main"}}/>
+                <Paper sx = {{backgroundColor: "primary.main", padding: "10px", fontSize: "35px", fontFamily:"Nunito", text: "#000"}}>
+                    I'm a college student pursuing a Computer Science and East Asian Studies Bachelor's Degree.
+                    I'm interested in making fun and interactive productives that enhance people's personal and work lives, 
+                    and like to think deeply at the geopolitical impacts of technological breakthroughs, especially if that 
+                    relationship affects security ties between East Asia, Southeast Asia, and the United States. 
+                </Paper>
             </Box>
         </ThemeProvider>
     )
