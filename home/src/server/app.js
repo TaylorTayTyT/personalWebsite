@@ -1,5 +1,10 @@
-const os = require('os')
+const express = require('express')
+const http = require('http')
+const app = express()
 
-const totalMem = os.freemem()
 
-console.log(totalMem)
+app.get("/", (req, res) => {
+    res.send("sup")
+})
+
+app.listen(3001, () => console.log("listening on port 3001"))

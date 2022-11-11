@@ -7,15 +7,26 @@ $button-color: white
 .topContainer
     height: 400px
     display: flex
+@keyframes back-grad 
+    0%
+        background-position: left
+    100%
+        background-position: right
 .topNav
     position: relative
     display: inherit
     width: 1500px
     scale: 2
-    background: $topBarColor
+    //background: $topBarColor
     height: 200px
     transform: rotate(-5deg)
     z-index: 10
+
+    background-image: linear-gradient(to right, #EFBBE4, #080A3F, #595ED4)
+    background-size: 400%
+    animation: back-grad 40s infinite alternate
+.topNav
+
 .leftBrick
     position: relative
     display: inherit
