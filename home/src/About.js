@@ -1,10 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import "./About.sass";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { palette } from '@mui/system';
-import { ClassNames } from '@emotion/react';
 function About() {
 
     const theme = createTheme({

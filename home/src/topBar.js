@@ -1,8 +1,6 @@
 import "./topNav.sass";
-import { Container, Paper, styled, Menu, MenuItem, Select, InputLabel, FormControl, Button, Box } from "@mui/material";
-import { useState } from "react";
+import {Container, Button} from "@mui/material";
 import mePic from "./images/meNoBG.png";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 function TopBar() {
     let scrollIntoViewSite = (e) => {
