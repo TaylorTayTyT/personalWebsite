@@ -13,8 +13,8 @@ root.render(
   <React.StrictMode>
     <TopBar/>
     <Fingerprint/>
-    <FlexButtons/>
     <About/>
+    <FlexButtons/>
   </React.StrictMode>
 );
 

@@ -23,7 +23,7 @@ function About() {
 
     return (
         <ThemeProvider theme = {theme}>
-            <Box style={{ transform: "translateY(270%)" }}
+            <Box style={{ transform: "translateY(20%)" }}
                 sx={{
                     display: 'flex',
                     flexWrap: 'wrap',
@@ -33,9 +33,12 @@ function About() {
                         height: 400,
                     },
                     justifyContent: 'center',
+                    transform: 'translateY(-50%)',
                 }}
             >
-                <Paper sx = {{backgroundColor: "primary.main", padding: "10px", fontSize: "35px", fontFamily:"Nunito", text: "#000"}}>
+
+                <p id = "aboutMe" style={{display: "inline-block", maxHeight: "50px", fontSize: "40px"}}>About Me!</p>
+                <Paper sx = {{backgroundColor: "#FFF", fontSize: "35px", padding: "10px", fontFamily:"Nunito", text: "#000"}}>
                     I'm a college student pursuing a Computer Science and East Asian Studies Bachelor's Degree.
                     I'm interested in making fun and interactive productives that enhance people's personal and work lives, 
                     and like to think deeply at the geopolitical impacts of technological breakthroughs, especially if that 

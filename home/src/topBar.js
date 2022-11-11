@@ -1,27 +1,28 @@
 import "./topNav.sass";
-import {Container, Paper, styled, Menu, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
+import { Container, Paper, styled, Menu, MenuItem, Select, InputLabel, FormControl, Button, Box } from "@mui/material";
 import { useState } from "react";
 import mePic from "./images/meNoBG.png";
-
-
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
-
-function handleRandClick(e) {
-    console.log(e)
-}
-
+import { hover } from "@testing-library/user-event/dist/hover";
 
 function TopBar() {
-
-    const [open, setOpen] = useState(false);
-    const handleMenuClick = () => {
-        setOpen(!open)
-    };
+    let scrollIntoViewSite = (e) => {
+        let element = document.getElementById(e);
+        console.log(element)
+        if (element) {
+            element.scrollIntoView();
+        }
+    }
+    const buttonStyle = {
+        fontFamily: "Nunito",
+        borderRadius: "2",
+        backgroundColor: "#0b4d4a",
+        mr: "20px",
+        color: "#FFF",
+        textTransform: "none",
+        "&:hover": {
+            backgroundColor: "#690020"
+        }
+    }
     return (
         <Container className="topContainer">
             <div className="topNav">
@@ -29,38 +30,19 @@ function TopBar() {
             <div className="leftBrick"></div>
             <div className="rightBrick"></div>
             <div className="circle">
-                <img className = "picOfMe" src = {mePic} alt = "mePic"/>
+                <img className="picOfMe" id="picOfMe" src={mePic} alt="mePic" />
             </div>
             <div className="topBarButton">
-                <FormControl fullWidth>
-                    <InputLabel id="navBar">page</InputLabel>
-                    <Select className="resumeOptions"
-                        id="navBarSelect"
-                        label="page"
-                        open={open}
-                        onClick={handleMenuClick}
-                        defaultValue="Home"
-                        sx={{ right: "5%", color: "#FFF", borderColor: "#FFF", background: "#9AB0E0" }}
-                    >
-                        <MenuItem value={1}>
-                            Home
-                        </MenuItem>
-                        <MenuItem value={2}>
-                            About
-                        </MenuItem>
-                        <MenuItem value={3}>
-                            Resume
-                        </MenuItem>
-                    </Select>
-                </FormControl>
-
+                <Button sx={buttonStyle} onClick={() => {scrollIntoViewSite("home")}}>Home</Button>
+                <Button sx={buttonStyle} onClick={() => {scrollIntoViewSite("language")}}>Languages</Button>
+                <Button sx={buttonStyle} onClick={() => {scrollIntoViewSite("aboutMe")}}>About</Button>
             </div>
             <div className="makeYourMark">
                 <h1>
                     Leave your <br></br>mark
                 </h1>
             </div>
-            <div className="intro">Hi, <br></br>I'm Taylor</div>
+            <div id = "home" className="intro">Hi, <br></br>I'm Taylor</div>
         </Container>
     )
 }
