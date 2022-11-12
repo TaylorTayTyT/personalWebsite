@@ -25,7 +25,7 @@ function FlexButton() {
                 </button>
             </div>
             <div className="github">
-                <p style={{ display: "block", left: "50%" }}><a href="https://github.com/TaylorTayTyT">This is my Github</a></p>
+                <p style={{ display: "block", left: "50%" }}>Check out my <a href="https://github.com/TaylorTayTyT">Github</a></p>
             </div>
 
         </div>
