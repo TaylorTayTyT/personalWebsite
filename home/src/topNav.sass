@@ -1,0 +1,118 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+    
+$topBarColor: #010714
+$leftBrickColor: #260101
+$rightBrickColor: #ECD5D5
+$button-color: white
+.topContainer
+    height: 400px
+    display: flex
+@keyframes back-grad 
+    0%
+        background-position: left
+    100%
+        background-position: right
+.topNav
+    position: relative
+    display: inherit
+    width: 1500px
+    scale: 2
+    //background: $topBarColor
+    height: 200px
+    transform: rotate(-5deg)
+    z-index: 10
+
+    background-image: linear-gradient(to right, #EFBBE4, #080A3F, #595ED4)
+    background-size: 400%
+    animation: back-grad 40s infinite alternate
+.topNav
+
+.leftBrick
+    position: relative
+    display: inherit
+    width: 50%
+    height: 300px
+    background: $leftBrickColor
+    transform: translate(-38%, 0%)
+    height: 650px
+    z-index: 5
+.rightBrick
+    position: inherit
+    z-index: 0
+    background: $rightBrickColor
+    width: 1500px
+    height: 600px
+    transform: translate(0%, -100%)
+.circle
+    position: absolute
+    z-index: 0
+    width: 300px
+    height: 300px
+    border-radius: 50%
+    background: #FFF
+    transform: translate(145%, -200%)
+    scale: 1.73
+.fingerprint
+    position: relative
+    left: 7%
+    scale: 0.3
+    transform: translate(-200%, 400%)
+    z-index: 20
+.backgroundFingerprint
+    display: inline
+    position: relative
+    opacity: 15%
+    scale: 0.30
+    z-index: 20
+.backgroundFingerprint:hover
+    opacity: 30%
+.a
+    transform: translate(-200%, 550%)
+.b
+    transform: translate(-270%, 400%)
+.c
+    transform: translate(-340%, 530%)
+.d
+    transform: translate(-540%, 350%)
+.e
+    transform: translate(-700%, 500%)
+.f
+    transform: translate(-800%, 400%)
+.g
+    transform: translate(-930%, 500%)
+.h
+    transform: translate(-1030%, 500%)
+
+.position
+    display: flex
+    position: relative
+    transform: translate(0px, -1000px)
+    z-index: 15
+    height: 400px
+.topBarButton
+    position: fixed
+    top: 2.5%
+    right: 2.5%
+    z-index: 100
+    .resumeOptions
+        position: absolute
+    
+.makeYourMark
+    position: absolute
+    color: #FFF
+    size: 100px
+    left: 8%
+    top: 20px
+    font-family: 'Nunito', sans-serif
+    z-index: 100
+.intro 
+    position: absolute
+    color: #FFF
+    z-index: 5
+    top:57%
+    left: 5%
+    font-family: 'Nunito', sans-serif
+    width: 900px
+    font-size: 100px
+
+    

@@ -1,0 +1,106 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+.flex
+    display: inline
+    font-size: 70px
+    position: absolute
+    font-family: 'Nunito', sans-serif
+    color: #000
+    width: 100%
+    text-vertical-align: middle
+    text-align: center
+    padding-top: 0px
+.introRes
+    @extend .flex
+    display: inline
+    padding-top: 50px 
+.language
+    @extend .flex
+    display: inherit
+    padding-top: 40px
+    height: 80px
+    width: 100%
+    //left: 45%
+.animate__animated.animate__fadeIn
+    animation-duration: 4s
+
+.button-45
+    left: 50%
+    padding-top: 60px
+    position: absolute
+    align-items: center
+    background-color: #FFE7E7
+    background-position: 0 0
+    border: 1px solid #FEE0E0
+    border-radius: 11px
+    box-sizing: border-box
+    color: #D33A2C
+    cursor: pointer
+    display: flex
+    font-size: 1rem
+    font-weight: 700
+    line-height: 33.4929px
+    list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none
+    padding: 2px 12px
+    text-align: left
+    text-decoration: none
+    text-shadow: none
+    text-underline-offset: 1px
+    transition: border .2s ease-in-out,box-shadow .2s ease-in-out
+    user-select: none
+    -webkit-user-select: none
+    touch-action: manipulation
+    white-space: nowrap
+    word-break: break-word
+    z-index: 1000
+
+.button-45:active,
+.button-45:hover,
+.button-45:focus
+    outline: 0
+
+.button-45:active
+    background-color: #D33A2C
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset
+    color: #FFFFFF
+
+.button-45:hover
+    background-color: #FFE3E3
+    border-color: #FAA4A4
+
+.button-45:active:hover,
+.button-45:focus:hover,
+.button-45:focus
+    background-color: #D33A2C
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset
+    color: #FFFFFF
+.button
+    background-color: #FFF
+.material-symbols-outlined
+    color: #f1e7e7
+.dino
+    top: 0%
+    left: 0%
+    transform: translate(-40%, 20%)
+    padding: 0
+.present
+    transform: translateY(-180%)
+.circusBall
+    right: 0px
+    transform: translate(60%, 40%)
+    z-index: -1000
+
+@keyframes background-pan   
+    0%
+        transform: translateY(0%)
+    100%
+        transform: translateY(-100%)
+        
+.github
+    //animation: background-pan 10s linear infinite
+    width: 100%
+    height: 500px
+    align-items: center
+    left: 50%
+    text-align: center
+    line-height: 400px
+    transform: translateY(-150%)
