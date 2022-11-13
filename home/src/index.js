@@ -2,33 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import TopBar from './topBar';
 import './Photo.sass';
-import Fingerprint from './Fingerprint';
-import About from './About';
-import FlexButtons from './FlexButton';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Switch } from '@mui/material';
-import { Rando } from './Rando';
+import HomePage from './HomePage';
+import PersonalityTest from './PersonalityTest/PersonalityTest';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
     <Router>
-      <Switch>
-        <Routes>
-          <Route path='http://localhost:3000/rando'>
-            <Rando />
-          </Route>
-          <Route path='http://localhost:3000'>
-            <TopBar />
-            <Fingerprint />
-            <About />
-            <FlexButtons />
-          </Route>
-        </Routes>
-      </Switch>
+      <Routes>
+        <Route element = {<HomePage />} path = '/'/>
+        <Route element = {<PersonalityTest/>} path = '/personalityTest'/>
+      </Routes>
     </Router>
   </React.StrictMode>
 

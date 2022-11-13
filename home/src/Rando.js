@@ -1,5 +1,12 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RandoSupp from './RandoSupp';
 export function Rando() {
-    return(
-        <h1>Hello World</h1>
+    return (
+        <Router>
+            <Routes>
+                <Route path='/extra' element = {<RandoSupp/>}>
+                </Route>
+            </Routes>
+        </Router>
     )
 }

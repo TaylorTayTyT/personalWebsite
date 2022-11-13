@@ -36,8 +36,8 @@ function About() {
 
                 <p id = "aboutMe" style={{display: "inline-block", maxHeight: "50px", fontSize: "40px"}}>About Me!</p>
                 <Paper sx = {{backgroundColor: "#FFF", fontSize: "35px", padding: "10px", fontFamily:"Nunito", text: "#000"}}>
-                    I'm a college student pursuing a Computer Science and East Asian Studies Bachelor's Degree.
-                    I'm interested in making fun and interactive productives that enhance people's personal and work lives, 
+                    I'm a college student pursuing a Computer Science and East Asian Studies Bachelor's Degree at Johns Hopkins University.
+                    I'm interested in making fun and interactive projects that enhance people's personal and work lives, 
                     and like to think deeply at the geopolitical impacts of technological breakthroughs, especially if that 
                     relationship affects security ties between East Asia, Southeast Asia, and the United States. 
                 </Paper>
