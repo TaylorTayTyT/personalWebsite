@@ -13,7 +13,7 @@ app.on("connect", () => {
 })
 
 app.get("/", (req, res) => {
-    res.render('home');
+    res.send("hello")
 })
 
 app.listen(3001, () => console.log("listening on port 3001"))
