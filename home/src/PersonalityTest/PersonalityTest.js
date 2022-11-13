@@ -11,7 +11,7 @@ function PersonalityTest() {
             display: 'flex',
             justifyContent: 'center'
           }}>
-            <TextField id="outlined-basic" label="Outlined" variant="outlined" style = {{verticalAlign: "center"}}/>
+            <TextField id="outlined-basic" variant="outlined" label = "Put something here" style = {{verticalAlign: "center"}}/>
         </Box>
     )
 }
