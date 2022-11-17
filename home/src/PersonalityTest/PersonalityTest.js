@@ -1,5 +1,6 @@
 import { TextField, Box } from "@mui/material";
 import "./PersonalityTest.sass";
+import Formed from './Form';
 
 function PersonalityTest() {
     return (
@@ -16,6 +17,7 @@ function PersonalityTest() {
             }}>
                 <TextField id="outlined-basic" variant="outlined" label="Put something here" style={{ verticalAlign: "center", display: 'block' }} />
             </Box>
+            <Formed/>
         </div>
     )
 }
