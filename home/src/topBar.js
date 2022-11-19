@@ -1,8 +1,13 @@
 import "./topNav.sass";
 import {Container, Button} from "@mui/material";
 import mePic from "./images/meNoBG.png";
+import { useNavigate } from "react-router-dom";
 
 function TopBar() {
+    const history = useNavigate(); 
+    const changePage  = () => {
+        history('/personalityTest', {replace: true});
+    }
     let scrollIntoViewSite = (e) => {
         let element = document.getElementById(e);
         console.log(element)
@@ -34,6 +39,7 @@ function TopBar() {
                 <Button sx={buttonStyle} onClick={() => {scrollIntoViewSite("home")}}>Home</Button>
                 <Button sx={buttonStyle} onClick={() => {scrollIntoViewSite("language")}}>Languages</Button>
                 <Button sx={buttonStyle} onClick={() => {scrollIntoViewSite("aboutMe")}}>About</Button>
+                <Button sx = {buttonStyle} onClick = {changePage}>personalityTest</Button>
             </div>
             <div className="makeYourMark">
                 <h1>

@@ -1,8 +1,24 @@
-import { TextField, Box } from "@mui/material";
+import { TextField, Box, Input, Button } from "@mui/material";
 import "./PersonalityTest.sass";
-import Formed from './Form';
 
 function PersonalityTest() {
+
+    const sendData = () => {
+        let data = {a: 1};
+        fetch('http://localhost:3001/', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+               },
+        })
+            .then((res) => { res.json() })
+            .then((json) => console.log(json))
+            .then(() => console.log("finished"))
+            .catch((e) => console.log(e))
+    }
+
     return (
         <div>
             <h1 className="title">How similar are you to me?</h1>
@@ -15,9 +31,9 @@ function PersonalityTest() {
                 display: 'flex',
                 justifyContent: 'center'
             }}>
-                <TextField id="outlined-basic" variant="outlined" label="Put something here" style={{ verticalAlign: "center", display: 'block' }} />
+                <TextField id="submissive" label="Filled" variant="filled" style={{ verticalAlign: "center", display: 'block' }} />
+                <button onClick={sendData}>Submit</button>
             </Box>
-            <Formed/>
         </div>
     )
 }
