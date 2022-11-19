@@ -3,6 +3,11 @@ import "./PersonalityTest.sass";
 
 function PersonalityTest() {
 
+    const questions = ['On a scale of 1-10, how extroverted are you', 
+    'Would you rather work independently or in a team', 
+    'When others upset you, do you: A) lash out B) do nothing C) talk it out', 
+    ]
+
     const sendData = () => {
         let data = {a: 1};
         fetch('http://localhost:3001/', {
