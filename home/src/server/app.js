@@ -3,7 +3,7 @@ const app = express();
 const http = require('http');
 const os = require('os');
 const { MongoClient } = require('mongodb')
-const mongoURL = 'mongodb+srv://TaylorTayTyT:rc6vPfesVfSdY9X9@chatbat.wzcwj.mongodb.net/test'
+const mongoURL = 'mongodb+srv://TaylorTayTyT:j75BiebDI7YnzwyL@chatbat.wzcwj.mongodb.net/test'
 const client = new MongoClient(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true })
 try {
     client.connect()
@@ -12,6 +12,9 @@ try {
 } finally {
     console.log("mongodb has done something")
 }
+
+
+const Profile = require('./Profile');
 
 var cors = require('cors');
 
@@ -35,12 +38,15 @@ app.post('/', (req, res) => {
 
 app.post('/personalityTest', (req, res) => {
     res.send('FLABBERGAS')
-    console.log('1')
+    console.log(req.title)
 })
 
 app.get('/personalityTest', (req, res) => {
     res.redirect('http://localhost:3000/personalityTest')
-    console.log('2')
+})
+
+app.get('/testingMongoDB', (req, res) => {
+    res.send('heyo')
 })
 
 app.listen(3001, () => {

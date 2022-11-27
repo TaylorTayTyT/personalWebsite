@@ -9,14 +9,16 @@ function PersonalityTest() {
     const baseURL = 'http://localhost:3000/personalityTest/';
 
     const handleSubmit = (event) => { 
+        event.preventDefault(); 
         axios.post(baseURL, {
             title: 'hi world',
             body: 'experimenting'
         })
         .then((response) => {
+            console.log(response.data)
             SetHelperText(response.data)
         })
-        event.preventDefault(); 
+        
     }
 
     return (
