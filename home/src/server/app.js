@@ -3,8 +3,10 @@ const app = express();
 const http = require('http');
 const os = require('os');
 const { MongoClient } = require('mongodb')
-const mongoURL = 'mongodb+srv://TaylorTayTyT:j75BiebDI7YnzwyL@chatbat.wzcwj.mongodb.net/test'
+const mongoURL = 'mongodb+srv://TaylorTayTyT:njXW0GEfEifT88Ra@chatbat.wzcwj.mongodb.net/test'
 const client = new MongoClient(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true })
+const questions = require('./questions.txt');
+
 try {
     client.connect()
 } catch (e) {
@@ -12,7 +14,6 @@ try {
 } finally {
     console.log("mongodb has done something")
 }
-
 
 const Profile = require('./Profile');
 
@@ -26,6 +27,9 @@ http.createServer();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+app.get('/personalityTest/send', (req, res) => {
+    res.send(questions)
+})
 
 app.get('/', (req, res) => {
     res.render('home.ejs')
