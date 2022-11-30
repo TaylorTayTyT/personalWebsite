@@ -6,7 +6,15 @@ import axios from 'axios'
 function PersonalityTest() {
     const [helperText, SetHelperText] = useState('default')
     const [error, SetError] = useState(false)
+    const [question, SetQuestion] = useState(0);
+
+    //read files from questions.txt
+    fetch('./questions.txt')
+    .then(response => console.log(response.text))
+    .then(text => console.log(text));
+
     const baseURL = 'http://localhost:3000/personalityTest/';
+    
 
     const handleSubmit = (event) => { 
         event.preventDefault(); 
@@ -18,7 +26,9 @@ function PersonalityTest() {
             console.log(response.data)
             SetHelperText(response.data)
         })
-        
+
+        let incQuestion = question + 1;
+        SetQuestion(incQuestion); 
     }
 
     return (
