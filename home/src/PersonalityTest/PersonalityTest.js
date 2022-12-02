@@ -9,26 +9,25 @@ function PersonalityTest() {
     const [question, SetQuestion] = useState(0);
 
     //read files from questions.txt
-    fetch('./questions.txt')
-    .then(response => console.log(response.text))
-    .then(text => console.log(text));
-
-    const baseURL = 'http://localhost:3000/personalityTest/';
     
 
-    const handleSubmit = (event) => { 
-        event.preventDefault(); 
+
+    const baseURL = 'http://localhost:3000/personalityTest/';
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
         axios.post(baseURL, {
             title: 'hi world',
             body: 'experimenting'
         })
-        .then((response) => {
-            console.log(response.data)
-            SetHelperText(response.data)
-        })
+            .then((response) => {
+                console.log(response.data)
+                SetHelperText(response.data)
+            })
 
         let incQuestion = question + 1;
-        SetQuestion(incQuestion); 
+        SetQuestion(incQuestion);
     }
 
     return (
@@ -89,7 +88,7 @@ function PersonalityTest() {
                                 />
                             </FormGroup>
                             <FormHelperText>{helperText}</FormHelperText>
-                            <Button onSubmit = {handleSubmit} type = 'submit'>Submit</Button>
+                            <Button onSubmit={handleSubmit} type='submit'>Submit</Button>
                         </FormControl>
                     </form>
                 </div>

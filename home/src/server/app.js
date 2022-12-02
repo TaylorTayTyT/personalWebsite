@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
 const http = require('http');
-const os = require('os');
+const fs = require('fs')
+const os = require('os')
 const { MongoClient } = require('mongodb')
 const mongoURL = 'mongodb+srv://TaylorTayTyT:njXW0GEfEifT88Ra@chatbat.wzcwj.mongodb.net/test'
 const client = new MongoClient(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true })
-const questions = require('./questions.txt');
+//const questions = require('./questions.txt');
 
 try {
     client.connect()
@@ -14,6 +15,10 @@ try {
 } finally {
     console.log("mongodb has done something")
 }
+
+
+const text = fs.readFileSync(__dirname + '\\questions.txt', 'utf8');
+console.log(text[1]);
 
 const Profile = require('./Profile');
 
@@ -28,7 +33,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/personalityTest/send', (req, res) => {
-    res.send(questions)
+    //res.send(questions)
 })
 
 app.get('/', (req, res) => {
